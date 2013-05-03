@@ -28,111 +28,111 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
-ace.define('ace/theme/glarkio', ['require', 'exports', 'module' , 'ace/lib/dom'], function(require, exports, module) {
+define('ace/theme/glarkio_blue', ['require', 'exports', 'module' , 'ace/lib/dom'], function(require, exports, module) {
 
 exports.isDark = true;
-exports.cssClass = "ace-glarkio";
-exports.cssText = ".ace-glarkio .ace_gutter {\
+exports.cssClass = "ace-glarkio-blue";
+exports.cssText = ".ace-glarkio-blue .ace_gutter {\
 background: #34495e; \
 color: #7f8c8d \
 }\
-.ace-glarkio .ace_print-margin {\
+.ace-glarkio-blue .ace_print-margin {\
 width: 1px;\
 background: #33555E\
 }\
-.ace-glarkio .ace_scroller {\
+.ace-glarkio-blue .ace_scroller {\
 background-color: #2c3e50 \
 }\
-.ace-glarkio .ace_text-layer {\
-color: #F8F8F2\
+.ace-glarkio-blue .ace_text-layer {\
+color: #ecf0f1  \
 }\
-.ace-glarkio .ace_cursor {\
+.ace-glarkio-blue .ace_cursor {\
 border-left: 2px solid #F8F8F0\
 }\
-.ace-glarkio .ace_overwrite-cursors .ace_cursor {\
+.ace-glarkio-blue .ace_overwrite-cursors .ace_cursor {\
 border-left: 0px;\
 border-bottom: 1px solid #F8F8F0\
 }\
-.ace-glarkio .ace_marker-layer .ace_selection {\
+.ace-glarkio-blue .ace_marker-layer .ace_selection {\
 background: rgba(255, 255, 255, 0.1)\
 }\
-.ace-glarkio.ace_multiselect .ace_selection.ace_start {\
+.ace-glarkio-blue.ace_multiselect .ace_selection.ace_start {\
 box-shadow: 0 0 3px 0px #272822;\
 border-radius: 2px\
 }\
-.ace-glarkio .ace_marker-layer .ace_step {\
+.ace-glarkio-blue .ace_marker-layer .ace_step {\
 background: rgb(102, 82, 0)\
 }\
-.ace-glarkio .ace_marker-layer .ace_bracket {\
+.ace-glarkio-blue .ace_marker-layer .ace_bracket {\
 margin: -1px 0 0 -1px;\
 border: 1px solid #49483E\
 }\
-.ace-glarkio .ace_marker-layer .ace_active-line {\
+.ace-glarkio-blue .ace_marker-layer .ace_active-line {\
 background: rgba(255, 255, 255, 0.1)\
 }\
-.ace-glarkio .ace_gutter-active-line {\
+.ace-glarkio-blue .ace_gutter-active-line {\
 background: rgba(255, 255, 255, 0.08)\
 }\
-.ace-glarkio .ace_marker-layer .ace_selected-word {\
+.ace-glarkio-blue .ace_marker-layer .ace_selected-word {\
 border: 1px solid #49483E\
 }\
-.ace-glarkio .ace_invisible {\
+.ace-glarkio-blue .ace_invisible {\
 color: rgba(147, 161, 161, 0.50)\
 }\
-.ace-glarkio .ace_entity.ace_name.ace_tag,\
-.ace-glarkio .ace_keyword,\
-.ace-glarkio .ace_meta,\
-.ace-glarkio .ace_storage {\
+.ace-glarkio-blue .ace_entity.ace_name.ace_tag,\
+.ace-glarkio-blue .ace_keyword,\
+.ace-glarkio-blue .ace_meta,\
+.ace-glarkio-blue .ace_storage {\
 color: #ff7567  \
 }\
-.ace-glarkio .ace_constant.ace_character,\
-.ace-glarkio .ace_constant.ace_language,\
-.ace-glarkio .ace_constant.ace_numeric,\
-.ace-glarkio .ace_constant.ace_other {\
+.ace-glarkio-blue .ace_constant.ace_character,\
+.ace-glarkio-blue .ace_constant.ace_language,\
+.ace-glarkio-blue .ace_constant.ace_numeric,\
+.ace-glarkio-blue .ace_constant.ace_other {\
 color: #c782e4\
 }\
-.ace-glarkio .ace_invalid {\
+.ace-glarkio-blue .ace_invalid {\
 color: #F8F8F0;\
 background-color: #F92672\
 }\
-.ace-glarkio .ace_invalid.ace_deprecated {\
+.ace-glarkio-blue .ace_invalid.ace_deprecated {\
 color: #F8F8F0;\
 background-color: #AE81FF\
 }\
-.ace-glarkio .ace_support.ace_constant,\
-.ace-glarkio .ace_support.ace_function {\
+.ace-glarkio-blue .ace_support.ace_constant,\
+.ace-glarkio-blue .ace_support.ace_function {\
 /* color: #66D9EF */\
 color: #61b8f3\
 }\
-.ace-glarkio .ace_fold {\
+.ace-glarkio-blue .ace_fold {\
 background-color: #A6E22E;\
 border-color: #F8F8F2\
 }\
-.ace-glarkio .ace_storage.ace_type,\
-.ace-glarkio .ace_support.ace_class,\
-.ace-glarkio .ace_support.ace_type {\
+.ace-glarkio-blue .ace_storage.ace_type,\
+.ace-glarkio-blue .ace_support.ace_class,\
+.ace-glarkio-blue .ace_support.ace_type {\
 font-style: italic;\
 color: #61b8f3\
 }\
-.ace-glarkio .ace_entity.ace_name.ace_function,\
-.ace-glarkio .ace_entity.ace_other,\
-.ace-glarkio .ace_variable {\
+.ace-glarkio-blue .ace_entity.ace_name.ace_function,\
+.ace-glarkio-blue .ace_entity.ace_other,\
+.ace-glarkio-blue .ace_variable {\
 color: #1abc9c\
 }\
-.ace-glarkio .ace_variable.ace_parameter {\
+.ace-glarkio-blue .ace_variable.ace_parameter {\
 font-style: italic;\
 color: #ff9232 \
 }\
-.ace-glarkio .ace_string {\
+.ace-glarkio-blue .ace_string {\
 color: #5bdd92\
 }\
-.ace-glarkio .ace_comment {\
+.ace-glarkio-blue .ace_comment {\
 color: #95a5a6\
 }\
-.ace-glarkio .ace_markup.ace_underline {\
+.ace-glarkio-blue .ace_markup.ace_underline {\
 text-decoration: underline\
 }\
-.ace-glarkio .ace_indent-guide {\
+.ace-glarkio-blue .ace_indent-guide {\
 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNQ11D6z7Bq1ar/ABCKBG6g04U2AAAAAElFTkSuQmCC) right repeat-y\
 }\
 ";

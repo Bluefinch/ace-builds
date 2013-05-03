@@ -55,6 +55,7 @@ module.exports.themes = module.exports.themes.map(function(name) {
 ace.define('ace/ext/themelist_utils/themes', ['require', 'exports', 'module' ], function(require, exports, module) {
 
 module.exports.themes = [
+    "toy_chest",
     "cobalt",
     "solarized_dark",
     "ambiance",
@@ -63,12 +64,12 @@ module.exports.themes = [
     "clouds",
     "tomorrow_night_blue",
     "kr_theme",
+    "glarkio_black",
     "merbivore",
     "chrome",
     "dawn",
     "github",
     "mono_industrial",
-    "glarkio",
     "terminal",
     "merbivore_soft",
     "twilight",
@@ -85,7 +86,8 @@ module.exports.themes = [
     "vibrant_ink",
     "tomorrow",
     "idle_fingers",
-    "eclipse"
+    "eclipse",
+    "glarkio_blue"
 ];
 
 });
