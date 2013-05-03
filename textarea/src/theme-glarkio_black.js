@@ -33,7 +33,8 @@ __ace_shadowed__.define('ace/theme/glarkio_black', ['require', 'exports', 'modul
 exports.isDark = true;
 exports.cssClass = "ace-glarkio-black";
 exports.cssText = ".ace-glarkio-black .ace_gutter {\
-background: #484848; \
+/* background: #484848;  */\
+background-color: #383838 \
 color: #7f8c8d \
 }\
 .ace-glarkio-black .ace_print-margin {\
