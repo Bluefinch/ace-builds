@@ -33,19 +33,20 @@ define('ace/theme/glarkio_black', ['require', 'exports', 'module' , 'ace/lib/dom
 exports.isDark = true;
 exports.cssClass = "ace-glarkio-black";
 exports.cssText = ".ace-glarkio-black .ace_gutter {\
-/* background: #484848;  */\
-background-color: #383838 \
-color: #7f8c8d \
+/* background: #484848;    */\
+background: #383838;\
+color: #7f8c8d\
 }\
 .ace-glarkio-black .ace_print-margin {\
 width: 1px;\
 background: #33555E\
 }\
 .ace-glarkio-black .ace_scroller {\
-background-color: #383838 \
+background-color: #383838\
 }\
 .ace-glarkio-black .ace_text-layer {\
-color: #ecf0f1  \
+/* color: #ecf0f1 */\
+color: #d5dcdf\
 }\
 .ace-glarkio-black .ace_cursor {\
 border-left: 2px solid #F8F8F0\
@@ -84,7 +85,7 @@ color: rgba(147, 161, 161, 0.50)\
 .ace-glarkio-black .ace_keyword,\
 .ace-glarkio-black .ace_meta,\
 .ace-glarkio-black .ace_storage {\
-color: #ff7567  \
+color: #ff7567\
 }\
 .ace-glarkio-black .ace_constant.ace_character,\
 .ace-glarkio-black .ace_constant.ace_language,\
@@ -122,7 +123,7 @@ color: #1abc9c\
 }\
 .ace-glarkio-black .ace_variable.ace_parameter {\
 font-style: italic;\
-color: #ff9232 \
+color: #ff9232\
 }\
 .ace-glarkio-black .ace_string {\
 color: #5bdd92\
