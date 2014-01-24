@@ -41,18 +41,12 @@ color: #333;\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-mono-industrial .ace_scroller {\
+.ace-mono-industrial {\
 background-color: #222C28;\
-}\
-.ace-mono-industrial .ace_text-layer {\
-color: #FFFFFF;\
+color: #FFFFFF\
 }\
 .ace-mono-industrial .ace_cursor {\
-border-left: 2px solid #FFFFFF;\
-}\
-.ace-mono-industrial .ace_overwrite-cursors .ace_cursor {\
-border-left: 0px;\
-border-bottom: 1px solid #FFFFFF;\
+color: #FFFFFF\
 }\
 .ace-mono-industrial .ace_marker-layer .ace_selection {\
 background: rgba(145, 153, 148, 0.40);\
@@ -81,9 +75,16 @@ border: 1px solid rgba(145, 153, 148, 0.40);\
 background-color: #A8B3AB;\
 border-color: #FFFFFF;\
 }\
-.ace-mono-industrial .ace_keyword{color:#A39E64;}.ace-mono-industrial .ace_keyword.ace_operator{color:#A8B3AB;}.ace-mono-industrial .ace_constant{color:#E98800;}.ace-mono-industrial .ace_constant.ace_numeric{color:#E98800;}.ace-mono-industrial .ace_support.ace_function{color:#588E60;}.ace-mono-industrial .ace_support.ace_constant{color:#C87500;}.ace-mono-industrial .ace_support.ace_class{color:#5778B6;}.ace-mono-industrial .ace_support.ace_type{color:#5778B6;}.ace-mono-industrial .ace_storage{color:#C23B00;}.ace-mono-industrial .ace_invalid{color:#FFFFFF;\
-background-color:rgba(153, 0, 0, 0.68);}.ace-mono-industrial .ace_comment{color:#666C68;\
-background-color:#151C19;}.ace-mono-industrial .ace_variable{color:#A8B3AB;}.ace-mono-industrial .ace_variable.ace_language{color:#648BD2;}.ace-mono-industrial .ace_variable.ace_parameter{color:#648BD2;}.ace-mono-industrial .ace_entity.ace_other.ace_attribute-name{color:#909993;}.ace-mono-industrial .ace_entity.ace_name.ace_function{color:#A8B3AB;}.ace-mono-industrial .ace_entity.ace_name{color:#5778B6;}.ace-mono-industrial .ace_entity.ace_name.ace_tag{color:#A65EFF;}";
+.ace-mono-industrial .ace_entity.ace_other.ace_attribute-name {\
+color: #909993\
+}\
+.ace-mono-industrial .ace_entity.ace_name.ace_tag {\
+color: #A65EFF\
+}\
+.ace-mono-industrial .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNQ1NbwZfALD/4PAAlTArlEC4r/AAAAAElFTkSuQmCC) right repeat-y\
+}\
+";
 
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);

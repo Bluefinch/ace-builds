@@ -41,18 +41,12 @@ color: #333;\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-dawn .ace_scroller {\
+.ace-dawn {\
 background-color: #F9F9F9;\
-}\
-.ace-dawn .ace_text-layer {\
-color: #080808;\
+color: #080808\
 }\
 .ace-dawn .ace_cursor {\
-border-left: 2px solid #000000;\
-}\
-.ace-dawn .ace_overwrite-cursors .ace_cursor {\
-border-left: 0px;\
-border-bottom: 1px solid #000000;\
+color: #000000\
 }\
 .ace-dawn .ace_marker-layer .ace_selection {\
 background: rgba(39, 95, 255, 0.30);\
@@ -81,14 +75,29 @@ border: 1px solid rgba(39, 95, 255, 0.30);\
 background-color: #794938;\
 border-color: #080808;\
 }\
-.ace-dawn .ace_keyword{color:#794938;}.ace-dawn .ace_constant{color:#811F24;}.ace-dawn .ace_support{color:#691C97;}.ace-dawn .ace_support.ace_function{color:#693A17;}.ace-dawn .ace_support.ace_constant{color:#B4371F;}.ace-dawn .ace_storage{font-style:italic;\
-color:#A71D5D;}.ace-dawn .ace_invalid.ace_illegal{text-decoration:underline;\
-font-style:italic;\
-color:#F8F8F8;\
-background-color:#B52A1D;}.ace-dawn .ace_invalid.ace_deprecated{text-decoration:underline;\
-font-style:italic;\
-color:#B52A1D;}.ace-dawn .ace_string{color:#0B6125;}.ace-dawn .ace_string.ace_regexp{color:#CF5628;}.ace-dawn .ace_comment{font-style:italic;\
-color:#5A525F;}.ace-dawn .ace_variable{color:#234A97;}.ace-dawn .ace_markup.ace_heading{color:#19356D;}.ace-dawn .ace_markup.ace_list{color:#693A17;}";
+.ace-dawn .ace_list,\
+.ace-dawn .ace_markup.ace_list,\
+.ace-dawn .ace_support.ace_function {\
+color: #693A17\
+}\
+.ace-dawn .ace_string.ace_regexp {\
+color: #CF5628\
+}\
+.ace-dawn .ace_comment {\
+font-style: italic;\
+color: #5A525F\
+}\
+.ace-dawn .ace_heading,\
+.ace-dawn .ace_markup.ace_heading {\
+color: #19356D\
+}\
+.ace-dawn .ace_variable {\
+color: #234A97\
+}\
+.ace-dawn .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y\
+}\
+";
 
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);

@@ -41,18 +41,12 @@ color: #333;\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-clouds .ace_scroller {\
+.ace-clouds {\
 background-color: #FFFFFF;\
-}\
-.ace-clouds .ace_text-layer {\
-color: #000000;\
+color: #000000\
 }\
 .ace-clouds .ace_cursor {\
-border-left: 2px solid #000000;\
-}\
-.ace-clouds .ace_overwrite-cursors .ace_cursor {\
-border-left: 0px;\
-border-bottom: 1px solid #000000;\
+color: #000000\
 }\
 .ace-clouds .ace_marker-layer .ace_selection {\
 background: #BDD5FC;\
@@ -81,7 +75,14 @@ border: 1px solid #BDD5FC;\
 background-color: #AF956F;\
 border-color: #000000;\
 }\
-.ace-clouds .ace_keyword{color:#AF956F;}.ace-clouds .ace_keyword.ace_operator{color:#484848;}.ace-clouds .ace_keyword.ace_other.ace_unit{color:#96DC5F;}.ace-clouds .ace_constant.ace_language{color:#39946A;}.ace-clouds .ace_constant.ace_numeric{color:#46A609;}.ace-clouds .ace_constant.ace_character.ace_entity{color:#BF78CC;}.ace-clouds .ace_support.ace_function{color:#C52727;}.ace-clouds .ace_support.ace_constant.ace_property-value{color:#AF956F;}.ace-clouds .ace_storage{color:#C52727;}.ace-clouds .ace_invalid{background-color:#FF002A;}.ace-clouds .ace_string{color:#5D90CD;}.ace-clouds .ace_comment{color:#BCC8BA;}.ace-clouds .ace_entity.ace_other.ace_attribute-name{color:#606060;}.ace-clouds .ace_entity.ace_name.ace_tag{color:#606060;}";
+.ace-clouds .ace_entity.ace_name.ace_tag,\
+.ace-clouds .ace_entity.ace_other.ace_attribute-name {\
+color: #606060\
+}\
+.ace-clouds .ace_indent-guide {\
+background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y\
+}\
+";
 
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);

@@ -41,18 +41,12 @@ color: #333;\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-tomorrow .ace_scroller {\
+.ace-tomorrow {\
 background-color: #FFFFFF;\
-}\
-.ace-tomorrow .ace_text-layer {\
-color: #4D4D4C;\
+color: #4D4D4C\
 }\
 .ace-tomorrow .ace_cursor {\
-border-left: 2px solid #AEAFAD;\
-}\
-.ace-tomorrow .ace_overwrite-cursors .ace_cursor {\
-border-left: 0px;\
-border-bottom: 1px solid #AEAFAD;\
+color: #AEAFAD\
 }\
 .ace-tomorrow .ace_marker-layer .ace_selection {\
 background: #D6D6D6;\
@@ -81,9 +75,25 @@ border: 1px solid #D6D6D6;\
 background-color: #4271AE;\
 border-color: #4D4D4C;\
 }\
-.ace-tomorrow .ace_keyword{color:#8959A8;}.ace-tomorrow .ace_keyword.ace_operator{color:#3E999F;}.ace-tomorrow .ace_keyword.ace_other.ace_unit{color:#F5871F;}.ace-tomorrow .ace_constant.ace_language{color:#F5871F;}.ace-tomorrow .ace_constant.ace_numeric{color:#F5871F;}.ace-tomorrow .ace_constant.ace_character{color:#F5871F;}.ace-tomorrow .ace_constant.ace_other{color:#666969;}.ace-tomorrow .ace_support.ace_function{color:#4271AE;}.ace-tomorrow .ace_support.ace_constant{color:#F5871F;}.ace-tomorrow .ace_support.ace_class{color:#C99E00;}.ace-tomorrow .ace_support.ace_type{color:#C99E00;}.ace-tomorrow .ace_storage{color:#8959A8;}.ace-tomorrow .ace_storage.ace_type{color:#8959A8;}.ace-tomorrow .ace_invalid{color:#FFFFFF;\
-background-color:#C82829;}.ace-tomorrow .ace_invalid.ace_deprecated{color:#FFFFFF;\
-background-color:#8959A8;}.ace-tomorrow .ace_string{color:#718C00;}.ace-tomorrow .ace_string.ace_regexp{color:#C82829;}.ace-tomorrow .ace_comment{color:#8E908C;}.ace-tomorrow .ace_variable{color:#C82829;}.ace-tomorrow .ace_variable.ace_parameter{color:#F5871F;}.ace-tomorrow .ace_meta.ace_tag{color:#C82829;}.ace-tomorrow .ace_entity.ace_other.ace_attribute-name{color:#C82829;}.ace-tomorrow .ace_entity.ace_name.ace_function{color:#4271AE;}.ace-tomorrow .ace_entity.ace_name.ace_tag{color:#C82829;}.ace-tomorrow .ace_markup.ace_heading{color:#718C00;}";
+.ace-tomorrow .ace_heading,\
+.ace-tomorrow .ace_markup.ace_heading,\
+.ace-tomorrow .ace_string {\
+color: #718C00\
+}\
+.ace-tomorrow .ace_entity.ace_name.ace_tag,\
+.ace-tomorrow .ace_entity.ace_other.ace_attribute-name,\
+.ace-tomorrow .ace_meta.ace_tag,\
+.ace-tomorrow .ace_string.ace_regexp,\
+.ace-tomorrow .ace_variable {\
+color: #C82829\
+}\
+.ace-tomorrow .ace_comment {\
+color: #8E908C\
+}\
+.ace-tomorrow .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bdu3f/BwAlfgctduB85QAAAABJRU5ErkJggg==) right repeat-y\
+}\
+";
 
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);

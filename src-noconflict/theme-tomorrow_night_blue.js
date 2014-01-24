@@ -41,18 +41,13 @@ color: #333;\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-tomorrow-night-blue .ace_scroller {\
+.ace-tomorrow-night-blue {\
 background-color: #002451;\
+color: #FFFFFF\
 }\
-.ace-tomorrow-night-blue .ace_text-layer {\
-color: #FFFFFF;\
-}\
+.ace-tomorrow-night-blue .ace_constant.ace_other,\
 .ace-tomorrow-night-blue .ace_cursor {\
-border-left: 2px solid #FFFFFF;\
-}\
-.ace-tomorrow-night-blue .ace_overwrite-cursors .ace_cursor {\
-border-left: 0px;\
-border-bottom: 1px solid #FFFFFF;\
+color: #FFFFFF\
 }\
 .ace-tomorrow-night-blue .ace_marker-layer .ace_selection {\
 background: #003F8E;\
@@ -81,9 +76,19 @@ border: 1px solid #003F8E;\
 background-color: #BBDAFF;\
 border-color: #FFFFFF;\
 }\
-.ace-tomorrow-night-blue .ace_keyword{color:#EBBBFF;}.ace-tomorrow-night-blue .ace_keyword.ace_operator{color:#99FFFF;}.ace-tomorrow-night-blue .ace_keyword.ace_other.ace_unit{color:#FFC58F;}.ace-tomorrow-night-blue .ace_constant.ace_language{color:#FFC58F;}.ace-tomorrow-night-blue .ace_constant.ace_numeric{color:#FFC58F;}.ace-tomorrow-night-blue .ace_constant.ace_character{color:#FFC58F;}.ace-tomorrow-night-blue .ace_constant.ace_other{color:#FFFFFF;}.ace-tomorrow-night-blue .ace_support.ace_function{color:#BBDAFF;}.ace-tomorrow-night-blue .ace_support.ace_constant{color:#FFC58F;}.ace-tomorrow-night-blue .ace_support.ace_class{color:#FFEEAD;}.ace-tomorrow-night-blue .ace_support.ace_type{color:#FFEEAD;}.ace-tomorrow-night-blue .ace_storage{color:#EBBBFF;}.ace-tomorrow-night-blue .ace_storage.ace_type{color:#EBBBFF;}.ace-tomorrow-night-blue .ace_invalid{color:#FFFFFF;\
-background-color:#F99DA5;}.ace-tomorrow-night-blue .ace_invalid.ace_deprecated{color:#FFFFFF;\
-background-color:#EBBBFF;}.ace-tomorrow-night-blue .ace_string{color:#D1F1A9;}.ace-tomorrow-night-blue .ace_string.ace_regexp{color:#FF9DA4;}.ace-tomorrow-night-blue .ace_comment{color:#7285B7;}.ace-tomorrow-night-blue .ace_variable{color:#FF9DA4;}.ace-tomorrow-night-blue .ace_variable.ace_parameter{color:#FFC58F;}.ace-tomorrow-night-blue .ace_meta.ace_tag{color:#FF9DA4;}.ace-tomorrow-night-blue .ace_entity.ace_other.ace_attribute-name{color:#FF9DA4;}.ace-tomorrow-night-blue .ace_entity.ace_name.ace_function{color:#BBDAFF;}.ace-tomorrow-night-blue .ace_entity.ace_name.ace_tag{color:#FF9DA4;}.ace-tomorrow-night-blue .ace_markup.ace_heading{color:#D1F1A9;}";
+.ace-tomorrow-night-blue .ace_support.ace_class,\
+.ace-tomorrow-night-blue .ace_support.ace_type {\
+color: #FFEEAD\
+}\
+.ace-tomorrow-night-blue .ace_heading,\
+.ace-tomorrow-night-blue .ace_markup.ace_heading,\
+.ace-tomorrow-night-blue .ace_string {\
+color: #D1F1A9\
+}\
+.ace-tomorrow-night-blue .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYJDzqfwPAANXAeNsiA+ZAAAAAElFTkSuQmCC) right repeat-y\
+}\
+";
 
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);

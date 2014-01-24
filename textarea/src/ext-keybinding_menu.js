@@ -40,8 +40,9 @@ __ace_shadowed__.define('ace/ext/keybinding_menu', ['require', 'exports', 'modul
             var kb = getEditorKeybordShortcuts(editor);
             var el = document.createElement('div');
             var commands = kb.reduce(function(previous, current) {
-                return previous + '<div class="ace_optionsMenuEntry"><b>' + current.command + '</b> : ' +
-                current.key + '</div>';
+                return previous + '<div class="ace_optionsMenuEntry"><span class="ace_optionsMenuCommand">' 
+                    + current.command + '</span> : '
+                    + '<span class="ace_optionsMenuKey">' + current.key + '</span></div>';
             }, '');
 
             el.id = 'kbshortcutmenu';
@@ -103,6 +104,14 @@ z-index: 1000;\
 }\
 .ace_closeButton{\
 background: rgba(245, 146, 146, 0.9);\
+}\
+.ace_optionsMenuKey {\
+color: darkslateblue;\
+font-weight: bold;\
+}\
+.ace_optionsMenuCommand {\
+color: darkcyan;\
+font-weight: normal;\
 }";
 dom.importCssString(cssText);
 module.exports.overlayPage = function overlayPage(editor, contentElement, top, right, bottom, left) {
@@ -157,26 +166,42 @@ module.exports.overlayPage = function overlayPage(editor, contentElement, top, r
 
 });
 
-__ace_shadowed__.define('ace/ext/menu_tools/get_editor_keyboard_shortcuts', ['require', 'exports', 'module' ], function(require, exports, module) {
-module.exports.getEditorKeybordShortcuts = function getEditorKeybordShortcuts (editor) {
-    var commands = editor.commands.byName;
-    var commandName;
-    var key;
-    var platform = editor.commands.platform;
-    var kb = [];
-    for (commandName in commands) {
-        try {
-            key = commands[commandName].bindKey[platform];
-            if (key) {
-               kb.push({
-                    'command' : commandName,
-                    'key' : key
-               });
+__ace_shadowed__.define('ace/ext/menu_tools/get_editor_keyboard_shortcuts', ['require', 'exports', 'module' , 'ace/lib/keys'], function(require, exports, module) {
+
+var keys = require("../../lib/keys");
+module.exports.getEditorKeybordShortcuts = function(editor) {
+    var KEY_MODS = keys.KEY_MODS;
+    var keybindings = [];
+    var commandMap = {};
+    editor.keyBinding.$handlers.forEach(function(handler) {
+        var ckb = handler.commandKeyBinding;
+        for (var i in ckb) {
+            var modifier = parseInt(i);
+            if (modifier == -1) {
+                modifier = "";
+            } else if(isNaN(modifier)) {
+                modifier = i;
+            } else {
+                modifier = "" +
+                    (modifier & KEY_MODS.command ? "Cmd-"   : "") +
+                    (modifier & KEY_MODS.ctrl    ? "Ctrl-"  : "") +
+                    (modifier & KEY_MODS.alt     ? "Alt-"   : "") +
+                    (modifier & KEY_MODS.shift   ? "Shift-" : "");
             }
-        } catch (e) {
+            for (var key in ckb[i]) {
+                var command = ckb[i][key]
+                if (typeof command != "string")
+                    command  = command.name
+                if (commandMap[command]) {
+                    commandMap[command].key += "|" + modifier + key;
+                } else {
+                    commandMap[command] = {key: modifier+key, command: command};
+                    keybindings.push(commandMap[command]);
+                }
+            }
         }
-    }
-    return kb;
+    });
+    return keybindings;
 };
 
 });

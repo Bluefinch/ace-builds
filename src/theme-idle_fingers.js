@@ -41,18 +41,12 @@ color: #333;\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-idle-fingers .ace_scroller {\
+.ace-idle-fingers {\
 background-color: #323232;\
-}\
-.ace-idle-fingers .ace_text-layer {\
-color: #FFFFFF;\
+color: #FFFFFF\
 }\
 .ace-idle-fingers .ace_cursor {\
-border-left: 2px solid #91FF00;\
-}\
-.ace-idle-fingers .ace_overwrite-cursors .ace_cursor {\
-border-left: 0px;\
-border-bottom: 1px solid #91FF00;\
+color: #91FF00\
 }\
 .ace-idle-fingers .ace_marker-layer .ace_selection {\
 background: rgba(90, 100, 126, 0.88);\
@@ -81,10 +75,14 @@ border: 1px solid rgba(90, 100, 126, 0.88);\
 background-color: #CC7833;\
 border-color: #FFFFFF;\
 }\
-.ace-idle-fingers .ace_keyword{color:#CC7833;}.ace-idle-fingers .ace_constant{color:#6C99BB;}.ace-idle-fingers .ace_support.ace_function{color:#B83426;}.ace-idle-fingers .ace_support.ace_constant{color:#6C99BB;}.ace-idle-fingers .ace_invalid{color:#FFFFFF;\
-background-color:#FF0000;}.ace-idle-fingers .ace_string{color:#A5C261;}.ace-idle-fingers .ace_string.ace_regexp{color:#CCCC33;}.ace-idle-fingers .ace_comment{font-style:italic;\
-color:#BC9458;}.ace-idle-fingers .ace_variable.ace_parameter{font-style:italic;}.ace-idle-fingers .ace_meta.ace_tag{color:#FFE5BB;}.ace-idle-fingers .ace_entity.ace_name{color:#FFC66D;}.ace-idle-fingers .ace_collab.ace_user1{color:#323232;\
-background-color:#FFF980;}";
+.ace-idle-fingers .ace_collab.ace_user1 {\
+color: #323232;\
+background-color: #FFF980\
+}\
+.ace-idle-fingers .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWMwMjLyZYiPj/8PAAreAwAI1+g0AAAAAElFTkSuQmCC) right repeat-y\
+}\
+";
 
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);

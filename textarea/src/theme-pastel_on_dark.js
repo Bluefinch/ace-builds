@@ -41,18 +41,12 @@ color: #333;\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-pastel-on-dark .ace_scroller {\
+.ace-pastel-on-dark {\
 background-color: #2C2828;\
-}\
-.ace-pastel-on-dark .ace_text-layer {\
-color: #8F938F;\
+color: #8F938F\
 }\
 .ace-pastel-on-dark .ace_cursor {\
-border-left: 2px solid #A7A7A7;\
-}\
-.ace-pastel-on-dark .ace_overwrite-cursors .ace_cursor {\
-border-left: 0px;\
-border-bottom: 1px solid #A7A7A7;\
+color: #A7A7A7\
 }\
 .ace-pastel-on-dark .ace_marker-layer .ace_selection {\
 background: rgba(221, 240, 255, 0.20);\
@@ -81,11 +75,19 @@ border: 1px solid rgba(221, 240, 255, 0.20);\
 background-color: #757aD8;\
 border-color: #8F938F;\
 }\
-.ace-pastel-on-dark .ace_keyword{color:#757aD8;}.ace-pastel-on-dark .ace_keyword.ace_operator{color:#797878;}.ace-pastel-on-dark .ace_constant{color:#4FB7C5;}.ace-pastel-on-dark .ace_constant.ace_language{color:#DE8E30;}.ace-pastel-on-dark .ace_constant.ace_numeric{color:#CCCCCC;}.ace-pastel-on-dark .ace_constant.ace_character{color:#AFA472;}.ace-pastel-on-dark .ace_support.ace_function{color:#AEB2F8;}.ace-pastel-on-dark .ace_invalid{color:#F8F8F8;\
-background-color:rgba(86, 45, 86, 0.75);}.ace-pastel-on-dark .ace_invalid.ace_illegal{color:#F8F8F8;\
-background-color:rgba(86, 45, 86, 0.75);}.ace-pastel-on-dark .ace_invalid.ace_deprecated{text-decoration:underline;\
-font-style:italic;\
-color:#D2A8A1;}.ace-pastel-on-dark .ace_string{color:#66A968;}.ace-pastel-on-dark .ace_string.ace_regexp{color:#E9C062;}.ace-pastel-on-dark .ace_comment{color:#A6C6FF;}.ace-pastel-on-dark .ace_variable{color:#BEBF55;}.ace-pastel-on-dark .ace_variable.ace_language{color:#C1C144;}";
+.ace-pastel-on-dark .ace_variable {\
+color: #BEBF55\
+}\
+.ace-pastel-on-dark .ace_variable.ace_language {\
+color: #C1C144\
+}\
+.ace-pastel-on-dark .ace_xml-pe {\
+color: #494949\
+}\
+.ace-pastel-on-dark .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYIiPj/8PAARgAh2NTMh8AAAAAElFTkSuQmCC) right repeat-y\
+}\
+";
 
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
